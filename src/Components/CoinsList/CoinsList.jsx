@@ -15,10 +15,10 @@ const CoinsList = ({coins}) => {
                         </div>
                         <div className={style.coin_item__price}>
                             <p style={{color: coin.color}}>
-                                {+coin.price} USD
+                                {(+coin.price).toFixed(2)} USD
                             </p>
                             <p style={{color: coin.color}}>
-                                {+coin.btcPrice} BTC
+                                {(+coin.btcPrice).toFixed(2)} BTC
                             </p>
                         </div>
                     </li>
