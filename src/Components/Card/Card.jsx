@@ -1,11 +1,19 @@
 import React from 'react';
 import style from "./style.module.css";
 
-const Card = () => {
+const Card = ({balance, setBalance}) => {
     return (
         <div className={style.card}>
-            <p>CRYPTO FINANCE</p>
-            <p>5000 $</p>
+            <div className={style.card_block}>
+                <p>CRYPTO FINANCE</p>
+                <button onClick={() => setBalance(prevState => prevState + 1000)}>Add money</button>
+            </div>
+
+            <div className={style.card_block}>
+                <p>Kamil</p>
+                <p>{balance} $</p>
+            </div>
+
         </div>
     );
 };

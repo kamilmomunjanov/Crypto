@@ -2,12 +2,12 @@ import React from 'react';
 import style from "./style.module.css";
 import Card from "../../Components/Card/Card.jsx";
 
-const Main = () => {
+const Main = ({balance, setBalance, coins}) => {
 
 
     return (
         <main className={style.main}>
-            <Card/>
+            <Card balance={balance} setBalance={setBalance}/>
         </main>
     );
 };

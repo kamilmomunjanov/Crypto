@@ -8,3 +8,8 @@
     border-radius: 16px;
     background-color: rgb(173, 160, 17);
 }
+
+.card_block{
+    display: flex;
+    justify-content: space-between;
+}
