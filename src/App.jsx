@@ -1,11 +1,11 @@
+import Header from "./Components/Header/Header.jsx";
+import Main from "./Pages/Main/Main.jsx";
 
 function App() {
-
-
   return (
     <div>
-        <h3>World</h3>
-        <p>Hello</p>
+        <Header/>
+        <Main/>
     </div>
   )
 }
