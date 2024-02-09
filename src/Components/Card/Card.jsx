@@ -1,7 +1,9 @@
 import React from 'react';
 import style from "./style.module.css";
+import WithRuBalance from "../../helpers/HOC/WithRuBalance.jsx";
 
-const Card = ({balance, setBalance}) => {
+const Card = ({balance, setBalance, ruBalance}) => {
+    console.log({ruBalance})
     return (
         <div className={style.card}>
             <div className={style.card_block}>
@@ -18,4 +20,4 @@ const Card = ({balance, setBalance}) => {
     );
 };
 
-export default Card;
+export default WithRuBalance(Card);
