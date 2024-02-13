@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import style from "./style.module.css";
+import {CoinsContext} from "../../context/coinsContext.js";
 
-const CoinsList = ({coins}) => {
+const CoinsList = () => {
+
+    const coinsContext = useContext(CoinsContext)
+    const {filteredCoins} = coinsContext
+    console.log(coinsContext)
     return (
         <div className={style.coins_list}>
             {
-                coins?.map(coin => (
+                filteredCoins?.map(coin => (
                     <li className={style.coin_item} key={coin.uuid}>
                         <div className={style.coin_item__info}>
                             <img className={style.coin_item__logo} src={coin.iconUrl} alt={coin.name}/>
