@@ -3,12 +3,15 @@ import style from "./style.module.css";
 import WithRuBalance from "../../helpers/HOC/WithRuBalance.jsx";
 
 const Card = ({balance, setBalance, ruBalance}) => {
-    console.log({ruBalance})
+
+    // React.useMemo(()=>{
+    //     console.log({ruBalance})
+    // },[balance])
     return (
         <div className={style.card}>
             <div className={style.card_block}>
                 <p>CRYPTO FINANCE</p>
-                <button onClick={() => setBalance(prevState => prevState + 1000)}>Add money</button>
+                <button onClick={setBalance}>Add money</button>
             </div>
 
             <div className={style.card_block}>
